@@ -60,7 +60,7 @@ if st.button("Generate Image"):
                         image_data = base64.b64decode(b64_image)
                         img = Image.open(BytesIO(image_data))
                         st.write(f"Gambar {idx + 1}:")
-                        st.image(img, caption=f"Gambar {idx + 1}", use_column_width=True)
+                        st.image(img, caption=f"Gambar {idx + 1}", use_container_width=True)
                     else:
                         st.warning(f"Tidak ada data Base64 untuk gambar {idx + 1}.")
             except requests.exceptions.RequestException as e:
